@@ -4,13 +4,14 @@ import Navbar from "./components/navbar";
 import { Posts } from "./pages/posts";
 import { Passengers } from "./pages/passengers";
 import InfiniteScrollProvider from "./components/context/InfiniteScrollProvider";
+import First from "./First";
 
 function App() {
   return (
     <>
       <Navbar />
       <Routes>
-        <Route path="/" />
+        <Route path="/" element={<First/>} />
         <Route
           path="posts"
           element={<InfiniteScrollProvider children={<Posts />} />}

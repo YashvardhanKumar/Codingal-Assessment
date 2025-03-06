@@ -76,6 +76,7 @@ const Navbar = () => {
   };
   return (
     <>
+      <Link to={"/"}>
       <div className="flex bg-white w-full h-16 top-0 justify-between fixed px-3 border-b-2 border-gray-300">
         <div className="flex items-center gap-3">
           <div className="h-12 w-12">
@@ -102,7 +103,7 @@ const Navbar = () => {
           {isMenuOpen ? <LuX size={32} /> : <LuMenu size={32} />}
         </button>
       </div>
-
+      </Link>
       <motion.div
         initial={{ height: 0, opacity: 0 }}
         animate={{
