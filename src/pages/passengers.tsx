@@ -1,7 +1,7 @@
 import { FormEvent, useEffect, useState } from "react";
 import axios from "axios";
 import { useInfiniteScrollContext } from "../components/context/InfiniteScrollProvider";
-import { Atom, Mosaic, OrbitProgress } from "react-loading-indicators";
+import { OrbitProgress } from "react-loading-indicators";
 import { BiGlobe, BiPhone, BiSearch } from "react-icons/bi";
 import { MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
@@ -61,7 +61,7 @@ export const Passengers = () => {
   const filterPassengers = (e: FormEvent) => {
     e.preventDefault();
     if (!searchQuery?.length) {
-      setFilteredPassengers((prev) => passengers);
+      setFilteredPassengers(() => passengers);
       return;
     }
     setFilteredPassengers(

@@ -4,7 +4,6 @@ import TextButton from "./buttons/text-button";
 import { motion } from "framer-motion";
 import { RadioButton } from "./buttons/radiobutton";
 import { GrClose } from "react-icons/gr";
-import { option } from "framer-motion/client";
 export interface Option {
   id: string;
   label: string;

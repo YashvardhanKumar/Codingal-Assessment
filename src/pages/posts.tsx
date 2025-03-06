@@ -1,7 +1,7 @@
 import { FormEvent, useEffect, useState } from "react";
 import axios from "axios";
 import { useInfiniteScrollContext } from "../components/context/InfiniteScrollProvider";
-import { Atom, Mosaic, OrbitProgress } from "react-loading-indicators";
+import { OrbitProgress } from "react-loading-indicators";
 import { BiSearch } from "react-icons/bi";
 export interface Post {
   userId: number;
@@ -49,7 +49,7 @@ export const Posts = () => {
   const filterPosts = (e: FormEvent) => {
     e.preventDefault();
     if (!searchQuery?.length) {
-      setFilteredPosts((prev) => posts);
+      setFilteredPosts(() => posts);
       return;
     }
     setFilteredPosts(

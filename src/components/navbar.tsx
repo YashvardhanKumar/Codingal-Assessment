@@ -1,4 +1,4 @@
-import { FC, FormEvent, useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import logo from "../assets/logo.png";
 import { LuMenu, LuX } from "react-icons/lu";
 import { motion } from "framer-motion";
@@ -44,7 +44,6 @@ const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isTimerStopped, setIsTimerStopped] = useState(false);
   const [others, setOthers] = useState<string | null>(null);
-  const [path, setPath] = useState<string[]>([]);
   useEffect(() => {
     if (seconds <= 0) {
       return;
