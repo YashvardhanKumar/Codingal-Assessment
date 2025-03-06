@@ -76,11 +76,13 @@ const Navbar = () => {
   };
   return (
     <>
-      <Link to={"/"}>
+      
       <div className="flex bg-white w-full h-16 top-0 justify-between fixed px-3 border-b-2 border-gray-300">
         <div className="flex items-center gap-3">
           <div className="h-12 w-12">
+            <Link to="/">
             <img src={logo} className="rounded-md" />
+            </Link>
           </div>
           <div className="max-md:hidden h-full w-[2px] bg-gray-300" />
           <div className="max-md:hidden font-semibold text-lg text-gray-600">
@@ -103,7 +105,6 @@ const Navbar = () => {
           {isMenuOpen ? <LuX size={32} /> : <LuMenu size={32} />}
         </button>
       </div>
-      </Link>
       <motion.div
         initial={{ height: 0, opacity: 0 }}
         animate={{
