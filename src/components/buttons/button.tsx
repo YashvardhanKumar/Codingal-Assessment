@@ -11,7 +11,7 @@ const Button: FC<ButtonProps> = ({ handleClick, text, isSubmit = false }) => {
     <button
       onClick={handleClick}
       type={isSubmit ? "submit" : "button"}
-      className="bg-[#f05641] text-white p-2 px-9 rounded-md cursor-pointer transition-opacity ease-in delay-200 opacity-100 hover:opacity-65"
+      className="bg-[#f05641] text-white sm:p-2 sm:px-9 p-2 px-7 rounded-md cursor-pointer transition-opacity ease-in delay-200 opacity-100 hover:opacity-65"
     >
       {text}
     </button>

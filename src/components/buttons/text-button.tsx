@@ -9,7 +9,7 @@ const TextButton: FC<ButtonProps> = ({handleClick, text}) => {
   return (
     <button
         onClick={handleClick}
-        className="bg-transparent text-black  p-2 px-9 rounded-md cursor-pointer transition ease-in delay-50 hover:bg-gray-100"
+        className="bg-transparent text-black sm:p-2 sm:px-9 p-2 px-7 rounded-md cursor-pointer transition ease-in delay-50 hover:bg-gray-100"
       >
         {text}
       </button>
